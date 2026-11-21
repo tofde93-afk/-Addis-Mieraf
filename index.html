@@ -1,0 +1,1851 @@
+<!DOCTYPE html>
+<html lang="am">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>አዲስ ምዕራፍ ለፍትህና እኩልነት | Addis Mieraf for Justice & Equality</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Ethiopic:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #f6f4ef;
+      --surface: #ffffff;
+      --surface-soft: #f0ece3;
+      --ink: #16211c;
+      --muted: #526059;
+      --primary: #14533c;
+      --primary-dark: #0d3a29;
+      --accent: #b45309;
+      --accent-soft: #fef3c7;
+      --border: #dfd9cc;
+      --shadow: 0 10px 30px rgba(22, 33, 28, 0.07);
+      --radius: 16px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Noto Sans Ethiopic', 'Plus Jakarta Sans', sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.72;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button, input, select, textarea {
+      font-family: inherit;
+    }
+
+    .container {
+      width: min(1160px, 92%);
+      margin: 0 auto;
+    }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      min-height: 72px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      font-size: 1rem;
+    }
+
+    .brand-badge {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+      font-size: 1.05rem;
+      flex-shrink: 0;
+    }
+
+    .brand small {
+      display: block;
+      font-weight: 500;
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--muted);
+      transition: color 0.2s;
+    }
+
+    nav a:hover {
+      color: var(--primary);
+    }
+
+    .lang-btn {
+      border: 1px solid var(--border);
+      background: var(--surface-soft);
+      color: var(--ink);
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 0.84rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .lang-btn:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    /* Hero */
+    .hero {
+      padding: 56px 0 44px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.35fr 0.9fr;
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .hero-main {
+      background: linear-gradient(145deg, var(--primary) 0%, var(--primary-dark) 100%);
+      color: #fff;
+      border-radius: var(--radius);
+      padding: 38px;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      margin-bottom: 18px;
+      width: fit-content;
+    }
+
+    .hero h1 {
+      font-size: clamp(1.65rem, 3vw, 2.45rem);
+      line-height: 1.35;
+      margin-bottom: 16px;
+      font-weight: 800;
+    }
+
+    .hero p.vision {
+      font-size: 1.02rem;
+      color: rgba(255, 255, 255, 0.92);
+      margin-bottom: 14px;
+    }
+
+    .hero p.vision-en {
+      font-size: 0.92rem;
+      color: rgba(255, 255, 255, 0.78);
+      border-left: 3px solid #f59e0b;
+      padding-left: 12px;
+      margin-bottom: 24px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 11px 20px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 0.92rem;
+      cursor: pointer;
+      border: none;
+      transition: transform 0.15s, background 0.2s;
+    }
+
+    .btn:active {
+      transform: scale(0.98);
+    }
+
+    .btn-accent {
+      background: #f59e0b;
+      color: #16211c;
+    }
+
+    .btn-accent:hover {
+      background: #fbbf24;
+    }
+
+    .btn-ghost-light {
+      background: rgba(255, 255, 255, 0.12);
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+    }
+
+    .btn-ghost-light:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-dark);
+    }
+
+    .hero-side {
+      display: grid;
+      gap: 16px;
+    }
+
+    .pillar-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+      box-shadow: var(--shadow);
+    }
+
+    .pillar-card h3 {
+      font-size: 1rem;
+      color: var(--primary);
+      margin-bottom: 6px;
+    }
+
+    .pillar-card p {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    /* Sections */
+    section {
+      padding: 46px 0;
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .section-head h2 {
+      font-size: 1.55rem;
+      font-weight: 800;
+    }
+
+    .section-head p {
+      color: var(--muted);
+      font-size: 0.94rem;
+      max-width: 640px;
+    }
+
+    /* Controls */
+    .controls {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-bottom: 22px;
+    }
+
+    .search-box {
+      flex: 1;
+      min-width: 240px;
+      padding: 11px 15px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      font-size: 0.94rem;
+    }
+
+    .tab-group {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .tab-btn {
+      padding: 9px 15px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--muted);
+      font-weight: 700;
+      font-size: 0.86rem;
+      cursor: pointer;
+    }
+
+    .tab-btn.active {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+    }
+
+    /* Articles Grid */
+    .grid-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 22px;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 14px;
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 0.76rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      margin-bottom: 8px;
+      width: fit-content;
+    }
+
+    .card h3 {
+      font-size: 1.08rem;
+      line-height: 1.48;
+      margin-bottom: 8px;
+    }
+
+    .card p.excerpt {
+      font-size: 0.91rem;
+      color: var(--muted);
+    }
+
+    .card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid var(--border);
+      padding-top: 12px;
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+
+    .read-link {
+      color: var(--primary);
+      font-weight: 700;
+      cursor: pointer;
+      background: none;
+      border: none;
+      font-size: 0.88rem;
+    }
+
+    .read-link:hover {
+      text-decoration: underline;
+    }
+
+    /* Tyranny Lessons */
+    .tyranny-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 26px;
+      box-shadow: var(--shadow);
+    }
+
+    .lesson-bar {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
+    }
+
+    .lesson-pills {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin-top: 14px;
+    }
+
+    .lesson-num {
+      width: 34px;
+      height: 34px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: var(--surface-soft);
+      font-weight: 700;
+      font-size: 0.84rem;
+      cursor: pointer;
+    }
+
+    .lesson-num.active {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+    }
+
+    .lesson-detail {
+      background: var(--surface-soft);
+      border-radius: 12px;
+      padding: 20px;
+      border-left: 4px solid var(--accent);
+    }
+
+    /* Multimedia & Contact */
+    .two-col {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+    }
+
+    .panel {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .panel h3 {
+      margin-bottom: 12px;
+      font-size: 1.15rem;
+    }
+
+    .audio-item {
+      padding: 14px;
+      border-radius: 12px;
+      background: var(--surface-soft);
+      margin-bottom: 12px;
+    }
+
+    .audio-item strong {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 0.95rem;
+    }
+
+    audio {
+      width: 100%;
+      height: 38px;
+    }
+
+    .form-group {
+      margin-bottom: 14px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.88rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 10px 12px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: #fff;
+      font-size: 0.92rem;
+    }
+
+    .status-msg {
+      margin-top: 10px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    /* Footer */
+    footer {
+      background: var(--ink);
+      color: rgba(255, 255, 255, 0.82);
+      padding: 30px 0;
+      margin-top: 30px;
+      font-size: 0.88rem;
+    }
+
+    .footer-wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    /* Modal Reader */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(10, 16, 13, 0.65);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 18px;
+      z-index: 100;
+    }
+
+    .modal-backdrop.open {
+      display: flex;
+    }
+
+    .modal {
+      background: var(--surface);
+      border-radius: var(--radius);
+      width: min(760px, 100%);
+      max-height: 88vh;
+      overflow-y: auto;
+      padding: 28px;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
+    }
+
+    .modal-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 14px;
+      margin-bottom: 18px;
+    }
+
+    .modal-controls {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .icon-btn {
+      border: 1px solid var(--border);
+      background: var(--surface-soft);
+      padding: 6px 11px;
+      border-radius: 8px;
+      font-weight: 700;
+      cursor: pointer;
+      font-size: 0.84rem;
+    }
+
+    .modal-body {
+      font-size: 1rem;
+      line-height: 1.85;
+      color: var(--ink);
+    }
+
+    .modal-body p {
+      margin-bottom: 14px;
+    }
+
+    @media (max-width: 860px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+      nav {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav-wrap">
+      <a href="#top" class="brand">
+        <div class="brand-badge">አም</div>
+        <div>
+          <span id="brandTitle">አዲስ ምዕራፍ</span>
+          <small id="brandSub">ለፍትህና እኩልነት • Addis Mieraf</small>
+        </div>
+      </a>
+      <nav>
+        <a href="#vision" data-i18n="navVision">ራዕይ</a>
+        <a href="#articles" data-i18n="navArticles">ጽሁፎችና መስኮት</a>
+        <a href="#tyranny" data-i18n="navTyranny">On Tyranny</a>
+        <a href="#media" data-i18n="navMedia">ድምጽና መልዕክት</a>
+      </nav>
+      <button class="lang-btn" id="langToggle" type="button">English</button>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero & Vision -->
+    <section class="hero" id="vision">
+      <div class="container hero-grid">
+        <div class="hero-main">
+          <div>
+            <div class="pill">Addis Mieraf for Justice & Equality</div>
+            <h1 id="heroHeading">የአዲስ ምዕራፍ ለፍትህና እኩልነት አላማ</h1>
+            <p class="vision" id="visionAm">
+              <strong>ራዕያችን፡</strong> ኢትዮጵያውያን በሃገራቸው የዘር፣ የኃይማኖትና የመደብ ልዩነት ሳይደረግባቸው የእኩል የሃገር ባለቤትነት መብታቸውን ለማስከበር እና በሃገሪቱ ፖለቲካዊ፣ ኢኮኖሚያዊ እና ማህበራዊ መስኮች ሙሉ፣ ፍትሃዊ እና ዴሞክራስያዊ የዜግነት መብታቸውን ተጠብቆ ማየት ነው።
+            </p>
+            <p class="vision-en">
+              The purpose of Addis Mieraf for Justice & Equality is to advocate and strive to achieve full and equal citizenship rights for all Ethiopians irrespective of their nationality, creed, and class.
+            </p>
+          </div>
+          <div class="hero-actions">
+            <a href="#articles" class="btn btn-accent" id="ctaRead">ጽሁፎችን ያንብቡ</a>
+            <a href="#media" class="btn btn-ghost-light" id="ctaContact">መልዕክት ይላኩ</a>
+          </div>
+        </div>
+
+        <div class="hero-side">
+          <div class="pillar-card">
+            <h3 id="p1Title">ፍትህና እኩል ዜግነት</h3>
+            <p id="p1Desc">በማንነት፣ በእምነት ወይም በማህበራዊ ደረጃ ሳይለዩ የሁሉም ዜጎች እኩል መብትና ክብር እንዲረጋገጥ መትጋት።</p>
+          </div>
+          <div class="pillar-card">
+            <h3 id="p2Title">መግባባት፣ ይቅርታና እርቅ</h3>
+            <p id="p2Desc">ስር ከሰደደ አለመተማመን ወደ መከባበር እና አብሮነት ለመሸጋገር ክፍት የውይይት መድረክ ማመቻቸት።</p>
+          </div>
+          <div class="pillar-card">
+            <h3 id="p3Title">ዴሞክራሲያዊ ተቋማትና ህግ</h3>
+            <p id="p3Desc">የህግ የበላይነት፣ ሰብአዊ መብቶች እና ህገ-መንግስታዊ ዋስትናዎች በተግባር እንዲከበሩ ድምጽ መሆን።</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Articles & Meskot -->
+    <section id="articles">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2 id="artHeading">ጽሁፎች እና «መስኮት» መድረክ</h2>
+            <p id="artSub">የውይይት መድረክ ጽሁፎች፣ የአቋም መግለጫዎች እና የመስኮት አምዶች — በርዕስ ወይም በቃላት ይፈልጉ።</p>
+          </div>
+        </div>
+
+        <div class="controls">
+          <input type="text" id="searchInput" class="search-box" placeholder="ጽሁፍ ይፈልጉ (ለምሳሌ፡ እርቅ፣ ህገ-መንግስት፣ ፍትህ)..." />
+          <div class="tab-group" id="categoryTabs">
+            <button class="tab-btn active" data-cat="all" type="button">ሁሉም</button>
+            <button class="tab-btn" data-cat="articles" type="button">Articles (ጽሁፎች)</button>
+            <button class="tab-btn" data-cat="meskot" type="button">Meskot (መስኮት)</button>
+          </div>
+        </div>
+
+        <div class="grid-cards" id="articlesGrid"></div>
+      </div>
+    </section>
+
+    <!-- On Tyranny Explorer -->
+    <section id="tyranny">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>On Tyranny: Twenty Lessons from the Twentieth Century</h2>
+            <p>Timothy Snyder — በመነሻ ገጹ ላይ የተካተተውን መጽሐፍ 20 ትምህርቶች በቀላሉ ያስሱ።</p>
+          </div>
+        </div>
+
+        <div class="tyranny-box">
+          <div class="lesson-bar">
+            <button class="btn btn-primary" id="prevLesson" type="button">← ቀዳሚ</button>
+            <button class="btn btn-primary" id="nextLesson" type="button">ቀጣይ →</button>
+            <span id="lessonCounter" style="font-weight: 700; color: var(--muted);">Lesson 1 / 20</span>
+          </div>
+          <div class="lesson-detail" id="lessonDetail"></div>
+          <div class="lesson-pills" id="lessonPills"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Media & Contact -->
+    <section id="media">
+      <div class="container two-col">
+        <div class="panel">
+          <h3 id="mediaTitle">የድምጽ እና ቪዲዮ መድረክ (Audio & Video)</h3>
+          <p style="color: var(--muted); font-size: 0.9rem; margin-bottom: 14px;">
+            የውይይት ቅጂዎችን እና ንግግሮችን እዚህ ማዳመጥ ይችላሉ (የራስዎን MP3/OGG ፋይል በቀላሉ ማያያዝ ይቻላል)።
+          </p>
+          <div class="audio-item">
+            <strong>የመወያያ መድረክ የድምጽ ቅጂ #1 (Discussion Audio 1)</strong>
+            <audio controls preload="none">
+              <source src="" type="audio/mpeg" />
+            </audio>
+          </div>
+          <div class="audio-item">
+            <strong>የመወያያ መድረክ የድምጽ ቅጂ #2 (Discussion Audio 2)</strong>
+            <audio controls preload="none">
+              <source src="" type="audio/mpeg" />
+            </audio>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h3 id="contactTitle">አስተያየት ወይም ጽሁፍ ይላኩ (Contact Us)</h3>
+          <form id="contactForm">
+            <div class="form-group">
+              <label for="senderName">ስም (Name)</label>
+              <input type="text" id="senderName" required placeholder="ሙሉ ስምዎን ያስገቡ" />
+            </div>
+            <div class="form-group">
+              <label for="senderEmail">ኢሜይል (Email)</label>
+              <input type="email" id="senderEmail" required placeholder="name@example.com" />
+            </div>
+            <div class="form-group">
+              <label for="senderMsg">መልዕክት / የጽሁፍ ሃሳብ (Message)</label>
+              <textarea id="senderMsg" rows="4" required placeholder="ሃሳብዎን ወይም አስተያየትዎን ይጻፉ..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">መልዕክት ላክ</button>
+            <div class="status-msg" id="formStatus"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-wrap">
+      <div><strong>አዲስ ምዕራፍ ለፍትህና እኩልነት</strong> — Addis Mieraf for Justice & Equality</div>
+      <div>© <span id="year"></span> Addis Mieraf. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <!-- Reader Modal -->
+  <div class="modal-backdrop" id="readerModal" role="dialog" aria-modal="true">
+    <div class="modal">
+      <div class="modal-top">
+        <h3 id="modalTitle" style="font-size: 1.15rem; line-height: 1.4;"></h3>
+        <div class="modal-controls">
+          <button class="icon-btn" id="fontSmaller" type="button">A-</button>
+          <button class="icon-btn" id="fontLarger" type="button">A+</button>
+          <button class="icon-btn" id="closeModal" type="button">✕ ዝጋ</button>
+        </div>
+      </div>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <script>
+    const posts = [
+      {
+        id: "purpose",
+        cat: "articles",
+        tag: "Articles • መወያያ መድረክ",
+        title: "የአዲስ ምዕራፍ የመወያያ መድረክ አላማ",
+        excerpt: "በእኩልነት፣ በፍትህ እና በክፍት ሃሳብ ልውውጥ ላይ የተመሰረተ የጋራ የመወያያ መድረክ አላማና መርሆች።",
+        body: [
+          "የአዲስ ምዕራፍ የመወያያ መድረክ ዋና አላማ ዜጎች ያላቸውን ልዩነቶች በመከባበር እና በማስረጃ ላይ በተመሰረተ ውይይት በመፍታት፣ ለፍትህና ለእኩልነት የጋራ መግባባት መፍጠር ነው።",
+          "እያንዳንዱ ዜጋ የሃገሩ ባለቤት እንደመሆኑ መጠን በፖለቲካዊ፣ ኢኮኖሚያዊ እና ማህበራዊ ጉዳዮች ላይ በእኩልነት የመሳተፍና የመጠቀም መብቱ ሊረጋገጥ ይገባል።"
+        ]
+      },
+      {
+        id: "trust-1",
+        cat: "articles",
+        tag: "Articles • ክፍል 1",
+        title: "ስር ከሰደደ ያለመተማመን ወደ ደመቀ ፍቅር ለመሸጋገር ያለን ምኞት ለመቀራረብ ያለንን ተስፋ እንዳያጨልም ስጋት ፈጥሯል (ክፍል አንድ)",
+        excerpt: "በማህበረሰብ ውስጥ የተፈጠረውን አለመተማመን እንዴት በተግባር በሚታይ እርቅና መቀራረብ መቀየር እንደሚቻል የሚዳስስ ጽሁፍ።",
+        body: [
+          "ታሪካዊ እና ወቅታዊ ቁርሾዎች ሳይፈቱ ሲቀሩ የጋራ ተስፋን ሊያደበዝዙ ይችላሉ፤ ይሁን እንጂ ከጥርጣሬ ይልቅ በእውነት፣ በፍትህ እና በይቅርታ ላይ የተመሰረተ መቀራረብ ዘላቂ ሰላምን ያመጣል።",
+          "ይህ ተከታታይ ጽሁፍ (ክፍል 1–5) ወደ ደመቀ አብሮነት ለመሻገር የሚያስፈልጉ የውይይት እርምጃዎችን ይመረምራል።"
+        ]
+      },
+      {
+        id: "trust-2",
+        cat: "articles",
+        tag: "Articles • ክፍል 2",
+        title: "ስር ከሰደደ ያለመተማመን ወደ ደመቀ ፍቅር ለመሸጋገር ያለን ምኞት ለመቀራረብ ያለንን ተስፋ እንዳያጨልም ስጋት ፈጥሯል (ክፍል ሁለት)",
+        excerpt: "የመተማመን ግንባታ በቃላት ብቻ ሳይሆን በተግባር ፍትሃዊነትና ተጠያቂነት እንዴት እንደሚጠናከር።",
+        body: [
+          "መተማመን የሚገነባው አንዱ ወገን የሌላውን ህመምና ስጋት በቅንነት ሲረዳ እና ፍትሃዊ መፍትሄ ሲሻ ነው።",
+          "በክፍል ሁለት የፖለቲካ እና የማህበረሰብ ግንኙነቶችን ወደ ጤናማ መስመር ለማምጣት ስለሚያስፈልጉ መሰረታዊ ቅድመ ሁኔታዎች ተብራርቷል።"
+        ]
+      },
+      {
+        id: "trust-3",
+        cat: "articles",
+        tag: "Articles • ክፍል 3",
+        title: "ስር ከሰደደ ያለመተማመን ወደ ደመቀ ፍቅር ለመሸጋገር ያለን ምኞት ለመቀራረብ ያለንን ተስፋ እንዳያጨልም ስጋት ፈጥሯል (ክፍል ሶስት)",
+        excerpt: "የጋራ ሃገራዊ መግባባት ለመፍጠር የመደማመጥ ባህል እና የሃሳብ ነጻነት ያላቸው ሚና።",
+        body: [
+          "የተለያዩ አመለካከቶችን ማስተናገድ የሚችል ዴሞክራሲያዊ ምህዳር ሲኖር ፍርሃትና ጥርጣሬ እየቀነሱ ይሄዳሉ።",
+          "በክፍል ሶስት የውይይት መድረኮች ውጤታማ እንዲሆኑ የሚረዱ ተግባራዊ መርሆች ቀርበዋል።"
+        ]
+      },
+      {
+        id: "trust-4",
+        cat: "articles",
+        tag: "Articles • ክፍል 4",
+        title: "ስር ከሰደደ ያለመተማመን ወደ ደመቀ ፍቅር ለመሸጋገር ያለን ምኞት ለመቀራረብ ያለንን ተስፋ እንዳያጨልም ስጋት ፈጥሯል (ክፍል አራት)",
+        excerpt: "የወል ዜግነት እና የብዝሃነት እውቅና እንዴት አብረው መሄድ እንደሚችሉ የሚያብራራ ክፍል።",
+        body: [
+          "የማንነት እውቅናና እኩልነት ከጋራ ዜግነት ጋር ተጣምረው ሲጓዙ ጠንካራ ማህበረሰብ ይፈጠራል።",
+          "በክፍል አራት በሃገራችን የፖለቲካ ባህል ውስጥ የሚስተዋሉ ተግዳሮቶችና መፍትሄዎቻቸው ተተንትነዋል።"
+        ]
+      },
+      {
+        id: "trust-5",
+        cat: "articles",
+        tag: "Articles • ክፍል 5",
+        title: "ስር ከሰደደ ያለመተማመን ወደ ደመቀ ፍቅር ለመሸጋገር ያለን ምኞት ለመቀራረብ ያለንን ተስፋ እንዳያጨልም ስጋት ፈጥሯል (ክፍል አምስት)",
+        excerpt: "የተከታታይ ጽሁፉ ማጠቃለያ እና ወደ ፍትህ፣ እኩልነትና አንድነት የሚወስዱ ቀጣይ እርምጃዎች።",
+        body: [
+          "ተስፋን ህያው ማድረግ የሚቻለው በተግባር የሚታይ ለውጥ ለማምጣት በጋራ ሲሰራ ነው።",
+          "በክፍል አምስት የመጨረሻ ሃሳቦች እና ለቀጣይ ትውልድ ሊተላለፉ የሚገቡ የእርቅና የፍትህ እሴቶች ተጠቃልለዋል።"
+        ]
+      },
+      {
+        id: "forgiving",
+        cat: "articles",
+        tag: "Articles • Reconciliation",
+        title: "Forgiving and being Reconciled",
+        excerpt: "Reflections on forgiveness, accountability, and building lasting reconciliation across divides.",
+        body: [
+          "Forgiveness and reconciliation are essential steps toward healing deep social and political wounds while upholding justice and human dignity.",
+          "True reconciliation requires acknowledging past harms honestly and committing to equal rights for every member of society."
+        ]
+      },
+      {
+        id: "yugoslavia",
+        cat: "articles",
+        tag: "Articles • ታሪካዊ ትምህርት",
+        title: "አሃዳዊቷን ዩጎዝላቪያ አልሞ ሰባት ሉኡላዊ መንግስታትን ካዋለደው የሰርቦች እንቅስቃሴ ምን እንማራለን?",
+        excerpt: "ከዩጎዝላቪያ ታሪክ የምንወስዳቸው የፖለቲካና የማህበረሰብ መግባባት ትምህርቶች።",
+        body: [
+          "ታሪክ ብዝሃነትን በማክበርና በሰላማዊ ድርድር የማይፈቱ ጥያቄዎች ወደ ከባድ አለመረጋጋት ሊያመሩ እንደሚችሉ ያስጠነቅቃል።",
+          "ይህ ጽሁፍ ከዩጎዝላቪያ ተሞክሮ ለሃገራችን ሊጠቅሙ የሚችሉ የጥንቃቄና የመፍትሄ ነጥቦችን ያቀርባል።"
+        ]
+      },
+      {
+        id: "merara",
+        cat: "articles",
+        tag: "Articles • ፖለቲካዊ ትንታኔ",
+        title: "በእኩልነት ላይ የተመሠረተች ሀገር ለመፍጠር የተደረጉ ሙከራዎች - ፕሮፌሰር መራራ",
+        excerpt: "በእኩልነትና በዴሞክራሲ ላይ የተመሰረተ ስርዓት ለመገንባት የተደረጉ ጥረቶችና ተግዳሮቶች ዳሰሳ።",
+        body: [
+          "በእኩልነት ላይ የተመሰረተች ሃገር መፍጠር የህግ የበላይነትን፣ የዜጎችን ነጻነት እና አካታች የፖለቲካ ስርዓትን ይጠይቃል።",
+          "ጽሁፉ በጉዳዩ ላይ የቀረቡ ሃሳቦችንና ያጋጠሙ ተግዳሮቶችን ይዳስሳል።"
+        ]
+      },
+      {
+        id: "statement",
+        cat: "articles",
+        tag: "Articles • የአቋም መግለጫ",
+        title: "ወቅታዊ የሃገራችን ሁኔታን አስመልክቶ የተሰጠ የአቋም መግለጫ",
+        excerpt: "የአዲስ ምዕራፍ የአቋም መግለጫ በወቅታዊ ሃገራዊ ጉዳዮች፣ በሰላምና በፍትህ ላይ።",
+        body: [
+          "የአዲስ ምዕራፍ ለፍትህና እኩልነት ወቅታዊውን የሃገራችን ሁኔታ በመከታተል የሰላም፣ የፍትህ እና የእኩል ዜግነት አቋሙን ያቀርባል።",
+          "ሁሉም ወገኖች የዜጎችን ህይወትና መብት በማስቀደም ወደ ሰላማዊ መፍትሄ እንዲያተኩሩ ጥሪ ያቀርባል።"
+        ]
+      },
+      {
+        id: "meskot-secularism",
+        cat: "meskot",
+        tag: "Meskot • መስኮት",
+        title: "በሴኪውላሪዝም ስም ጸረ ሴኪውላሪዝም ዘመቻ ማድረግ ይቁም!",
+        excerpt: "የሃይማኖት ነጻነትንና የመንግስትና የሃይማኖትን መለያየት መርሆች የሚመለከት የመስኮት ጽሁፍ።",
+        body: [
+          "ትክክለኛ ሴኪውላሪዝም ሁሉም እምነቶች በእኩልነትና በነጻነት እንዲከበሩ የሚያስችል እንጂ ማንኛውንም እምነት የማግለል መሳሪያ መሆን የለበትም።",
+          "በመስኮት አምድ ስር የቀረበው ይህ ጽሁፍ የመርሆውን ትክክለኛ ትርጉምና አተገባበር ይመረምራል።"
+        ]
+      },
+      {
+        id: "meskot-art90",
+        cat: "meskot",
+        tag: "Meskot • መስኮት",
+        title: "የህገ-መንግስቱ አንቀጽ 90 ይከበር!",
+        excerpt: "በህገ-መንግስቱ አንቀጽ 90 የተቀመጡ የሃይማኖት ነጻነትና ሴኪውላሪዝም ድንጋጌዎች ይከበሩ የሚል ጥሪ።",
+        body: [
+          "የዜጎች የእምነት ነጻነት በህገ-መንግስት የተረጋገጠ መሰረታዊ መብት ነው።",
+          "ህገ-መንግስታዊ ድንጋጌዎች በተግባር በትክክል መከበራቸው ለማህበረሰብ መረጋጋት ወሳኝ ነው።"
+        ]
+      },
+      {
+        id: "meskot-muslim",
+        cat: "meskot",
+        tag: "Meskot • መስኮት",
+        title: "ከማህበረ-ፖለቲካዊ ተሳትፎ እየተገፋ ያለው ሙስሊም",
+        excerpt: "የሙስሊም ኢትዮጵያውያን የእኩል ተሳትፎና የዜግነት መብት ጥያቄዎችን የሚመለከት ጽሁፍ።",
+        body: [
+          "ሁሉም ዜጎች ያለ ምንም መድልዎ በሃገራቸው ማህበራዊ፣ ኢኮኖሚያዊ እና ፖለቲካዊ ህይወት የመሳተፍ እኩል እድል ሊኖራቸው ይገባል።",
+          "ይህ ጽሁፍ የእኩልነትና የፍትህ መርሆች በተግባር እንዲረጋገጡ የሚያነሳቸውን ጉዳዮች ያብራራል።"
+        ]
+      },
+      {
+        id: "meskot-oromo-muslim",
+        cat: "meskot",
+        tag: "Meskot • መስኮት",
+        title: "ኦሮሞና ሙስሊሙ በህዳሴዉ አብዮት",
+        excerpt: "በታሪክና በወቅታዊ ሁኔታዎች ውስጥ የፍትህና የእኩልነት ትግሎች ትስስር።",
+        body: [
+          "የፍትህና የእኩልነት ጥያቄዎች ሲደማመሩ የጋራ የመብትና የክብር ግንዛቤ ይጎለብታል።",
+          "በመስኮት አምድ የቀረበው ይህ ጽሁፍ ታሪካዊ ዳራዎችንና ወቅታዊ እይታዎችን ያካትታል።"
+        ]
+      },
+      {
+        id: "meskot-struggle-3",
+        cat: "meskot",
+        tag: "Meskot • መስኮት",
+        title: "በትግላችን ሶስተኛ አመት ላይ ያለንበት ሁኔታ ትግላችንን አጠናክረን እንድንቀጥል የሚያስገድድ ነው!",
+        excerpt: "የሰላማዊና የመብት ትግል ሂደት፣ የሶስት አመት ተሞክሮ እና የቀጣይ ትኩረት ነጥቦች።",
+        body: [
+          "የመብትና የፍትህ ትግል በትዕግስት፣ በጽናት እና በተደራጀ የሃሳብ ጥንካሬ ይቀጥላል።",
+          "ይህ ጽሁፍ ያለፉትን ሶስት አመታት ልምዶች በመገምገም ቀጣይ አቅጣጫዎችን ያመላክታል።"
+        ]
+      }
+    ];
+
+    const tyrannyLessons = [
+      "1. Do not obey in advance.",
+      "2. Defend institutions.",
+      "3. Beware the one-party state.",
+      "4. Take responsibility for the face of the world.",
+      "5. Remember professional ethics.",
+      "6. Be wary of paramilitaries.",
+      "7. Be reflective if you must be armed.",
+      "8. Stand out.",
+      "9. Be kind to our language.",
+      "10. Believe in truth.",
+      "11. Investigate.",
+      "12. Make eye contact and small talk.",
+      "13. Practice corporeal politics.",
+      "14. Establish a private life.",
+      "15. Contribute to good causes.",
+      "16. Learn from peers in other countries.",
+      "1ባለፈው የ **አዲስ ምዕራፍ (Addis Mieraf)** ድረ-ገጽ ዲዛይን ሲዘጋጅ በ **Canvas** ውስጥ ተፈጥሮ ነበር፣ ነገር ግን ሙሉው ኮድ በዚህ ጽሁፍ ውስጥ በቀጥታ ገና አልተቀመጠም።
+
+በቀላሉ ኮپی አድርገው ወደ `index.html` ፋይል መለጠፍ እንዲችሉ፣ ከዚህ በታች የ **አዲስ ምዕራፍ ለፍትህና እኩልነት (Addis Mieraf for Justice & Equality)** ሙሉ፣ ራሱን የቻለ (standalone) እና ከቀድሞው ድረ-ገጽ (`https://sites.google.com/site/addismieraf1/home`) በተነሳ መልኩ የተቀረጸ የ `index.html` ኮድ አዘጋጅቻለሁ፦
+
+```html
+<!DOCTYPE html>
+<html lang="am">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>አዲስ ምዕራፍ ለፍትህና እኩልነት | Addis Mieraf for Justice & Equality</title>
+  <link rel="preconnect" href="[https://fonts.googleapis.com](https://fonts.googleapis.com)" />
+  <link rel="preconnect" href="[https://fonts.gstatic.com](https://fonts.gstatic.com)" crossorigin />
+  <link href="[https://fonts.googleapis.com/css2?family=Noto+Sans+Ethiopic:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap](https://fonts.googleapis.com/css2?family=Noto+Sans+Ethiopic:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap)" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #f6f4ef;
+      --surface: #ffffff;
+      --surface-soft: #efece4;
+      --ink: #17202a;
+      --muted: #55606e;
+      --primary: #14452f;
+      --primary-2: #1f6344;
+      --accent: #b86b19;
+      --accent-soft: #fdf3e7;
+      --border: #dfe3dc;
+      --radius: 14px;
+      --shadow: 0 8px 28px rgba(23, 32, 42, 0.06);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Noto Sans Ethiopic', 'Plus Jakarta Sans', sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.75;
+      font-size: 16px;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    button, input, select, textarea { font-family: inherit; }
+
+    .container {
+      width: 100%;
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      min-height: 70px;
+      flex-wrap: wrap;
+      padding: 8px 0;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-badge {
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    .brand-title {
+      font-weight: 800;
+      font-size: 16px;
+      line-height: 1.25;
+      color: var(--primary);
+    }
+
+    .brand-sub {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      padding: 7px 12px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--ink);
+      transition: background 0.18s ease, color 0.18s ease;
+    }
+
+    nav a:hover {
+      background: var(--surface-soft);
+      color: var(--primary);
+    }
+
+    .lang-btn {
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 13px;
+      cursor: pointer;
+    }
+
+    .lang-btn:hover { background: var(--primary-2); }
+
+    /* Hero */
+    .hero {
+      padding: 56px 0 40px;
+    }
+
+    .hero-card {
+      background: linear-gradient(135deg, #123b28 0%, #1c533a 65%, #2b473b 100%);
+      color: #fff;
+      border-radius: 20px;
+      padding: 40px 36px;
+      box-shadow: var(--shadow);
+    }
+
+    .eyebrow {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.14);
+      color: #f8e3c4;
+      padding: 5px 12px;
+      border-radius: 999px;
+      font-size: 12.5px;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .hero h1 {
+      font-size: clamp(26px, 4vw, 40px);
+      line-height: 1.25;
+      font-weight: 800;
+      margin-bottom: 18px;
+    }
+
+    .vision-am {
+      font-size: 18px;
+      line-height: 1.85;
+      color: #f4f7f5;
+      margin-bottom: 12px;
+      font-weight: 500;
+    }
+
+    .vision-en {
+      font-size: 15px;
+      line-height: 1.65;
+      color: #d6e4dc;
+      font-style: italic;
+      margin-bottom: 26px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 11px 18px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 14px;
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: 0.18s ease;
+    }
+
+    .btn-gold {
+      background: #e69635;
+      color: #161b18;
+    }
+
+    .btn-gold:hover { background: #f0a447; }
+
+    .btn-ghost {
+      background: rgba(255, 255, 255, 0.12);
+      color: #fff;
+      border-color: rgba(255, 255, 255, 0.25);
+    }
+
+    .btn-ghost:hover { background: rgba(255, 255, 255, 0.2); }
+
+    /* Sections */
+    section { padding: 36px 0; }
+
+    .sec-head {
+      margin-bottom: 20px;
+    }
+
+    .sec-head h2 {
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 4px;
+    }
+
+    .sec-head p {
+      color: var(--muted);
+      font-size: 14.5px;
+    }
+
+    /* Pillars */
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 16px;
+    }
+
+    .pillar {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+      box-shadow: var(--shadow);
+    }
+
+    .pillar h3 {
+      font-size: 17px;
+      color: var(--primary);
+      margin-bottom: 8px;
+    }
+
+    .pillar p {
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    /* Controls */
+    .controls {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      background: var(--surface);
+      padding: 14px;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+    }
+
+    .tabs {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .tab-btn {
+      padding: 8px 14px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: var(--surface-soft);
+      color: var(--ink);
+      font-weight: 700;
+      font-size: 13.5px;
+      cursor: pointer;
+    }
+
+    .tab-btn.active {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+    }
+
+    .search-input {
+      flex: 1;
+      min-width: 220px;
+      padding: 9px 14px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      font-size: 14px;
+      background: #fff;
+    }
+
+    /* Cards Grid */
+    .posts-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+      gap: 18px;
+    }
+
+    .post-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 14px;
+      box-shadow: var(--shadow);
+    }
+
+    .tag {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+
+    .post-card h3 {
+      font-size: 17px;
+      line-height: 1.45;
+      color: var(--ink);
+      margin-bottom: 8px;
+    }
+
+    .post-excerpt {
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .read-btn {
+      align-self: flex-start;
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-size: 13.5px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .read-btn:hover { background: var(--primary-2); }
+
+    /* Tyranny Lessons */
+    .tyranny-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 22px;
+      box-shadow: var(--shadow);
+    }
+
+    .lesson-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .lesson-item {
+      padding: 12px 14px;
+      border-radius: 10px;
+      background: var(--surface-soft);
+      border: 1px solid transparent;
+      cursor: pointer;
+      text-align: left;
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--ink);
+    }
+
+    .lesson-item:hover, .lesson-item.selected {
+      background: #e9f2ed;
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    .lesson-detail {
+      margin-top: 16px;
+      padding: 16px;
+      border-radius: 10px;
+      background: var(--accent-soft);
+      border-left: 4px solid var(--accent);
+      font-size: 14.5px;
+    }
+
+    /* Contact & Audio */
+    .two-col {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .panel {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 22px;
+      box-shadow: var(--shadow);
+    }
+
+    .panel h3 {
+      font-size: 18px;
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+
+    .form-group {
+      margin-bottom: 12px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 13.5px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .form-group input, .form-group textarea, .form-group select {
+      width: 100%;
+      padding: 9px 12px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      font-size: 14px;
+    }
+
+    /* Modal Reader */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(10, 15, 20, 0.65);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      z-index: 100;
+    }
+
+    .modal-backdrop.open { display: flex; }
+
+    .modal {
+      background: #fff;
+      max-width: 740px;
+      width: 100%;
+      max-height: 88vh;
+      overflow-y: auto;
+      border-radius: 16px;
+      padding: 26px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+    }
+
+    .modal-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 12px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+
+    .font-tools {
+      display: flex;
+      gap: 6px;
+      align-items: center;
+    }
+
+    .small-btn {
+      padding: 5px 10px;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      background: var(--surface-soft);
+      font-weight: 700;
+      font-size: 13px;
+      cursor: pointer;
+    }
+
+    .modal-body {
+      white-space: pre-line;
+      line-height: 1.85;
+      color: var(--ink);
+    }
+
+    footer {
+      margin-top: 40px;
+      padding: 24px 0;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      color: var(--muted);
+      font-size: 13.5px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container nav-wrap">
+      <a href="#top" class="brand">
+        <div class="brand-badge">አም</div>
+        <div>
+          <div class="brand-title" id="navTitle">አዲስ ምዕራፍ ለፍትህና እኩልነት</div>
+          <div class="brand-sub">Addis Mieraf for Justice & Equality</div>
+        </div>
+      </a>
+
+      <nav>
+        <a href="#vision" data-i18n="navVision">ራዕይ</a>
+        <a href="#archive" data-i18n="navArchive">ጽሁፎችና መስኮት</a>
+        <a href="#tyranny" data-i18n="navTyranny">20 ትምህርቶች</a>
+        <a href="#contact" data-i18n="navContact">ግንኙነት</a>
+      </nav>
+
+      <button class="lang-btn" id="langToggle" type="button">English</button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container">
+        <div class="hero-card">
+          <span class="eyebrow" id="heroEyebrow">የውይይት፣ የፍትህ እና የእኩልነት መድረክ</span>
+          <h1 id="heroHeading">አዲስ ምዕራፍ ለፍትህና እኩልነት</h1>
+          <p class="vision-am">
+            <strong>ራዕያችን፦</strong> ኢትዮጵያውያን በሃገራቸው የዘር፣ የኃይማኖትና የመደብ ልዩነት ሳይደረግባቸው የእኩል የሃገር ባለቤትነት መብታቸውን ለማስከበር እና በሃገሪቱ ፖለቲካዊ፣ ኢኮኖሚያዊ እና ማህበራዊ መስኮች ሙሉ፣ ፍትሃዊ እና ዴሞክራስያዊ የዜግነት መብታቸውን ተጠብቆ ማየት ነው።
+          </p>
+          <p class="vision-en">
+            The purpose of Addis Mieraf for Justice & Equality is to advocate and strive to achieve full and equal citizenship rights for all Ethiopians irrespective of their nationality, creed, and class.
+          </p>
+          <div class="hero-actions">
+            <a href="#archive" class="btn btn-gold" id="heroCtaPrimary">ጽሁፎችን ያንብቡ</a>
+            <a href="#contact" class="btn btn-ghost" id="heroCtaSecondary">ሃሳብ ይላኩ</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="vision">
+      <div class="container">
+        <div class="sec-head">
+          <h2 id="pillarsTitle">መሰረታዊ እሴቶች</h2>
+          <p id="pillarsSub">በጋራ መከባበር፣ በህግ የበላይነት እና በእኩል ዜግነት ላይ የተመሰረተ ማህበረሰብ</p>
+        </div>
+        <div class="pillars-grid">
+          <div class="pillar">
+            <h3>ፍትህና ህግ (Justice)</h3>
+            <p>የዜጎች መብትና ነጻነት በህግና በፍትሃዊ ስርዓት እንዲከበር መጣር።</p>
+          </div>
+          <div class="pillar">
+            <h3>እኩልነት (Equality)</h3>
+            <p>በዘር፣ በቋንቋ፣ በሃይማኖት ወይም በማህበራዊ ደረጃ ሳይለያዩ እኩል እድልና ተሳትፎ።</p>
+          </div>
+          <div class="pillar">
+            <h3>መግባባትና እርቅ (Reconciliation)</h3>
+            <p>ያለመተማመንን በማስወገድ በውይይትና በይቅርታ ወደ ዘላቂ መቀራረብ መሸጋገር።</p>
+          </div>
+          <div class="pillar">
+            <h3>ዴሞክራሲ (Democracy)</h3>
+            <p>የሃሳብ ነጻነት፣ ተጠያቂነት እና አሳታፊ የፖለቲካና ማህበራዊ ባህል ማጎልበት።</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="archive">
+      <div class="container">
+        <div class="sec-head">
+          <h2 id="archiveTitle">ጽሁፎች እና «መስኮት» መድረክ</h2>
+          <p id="archiveSub">የአቋም መግለጫዎች፣ ትንታኔዎች እና የመስኮት ዓምዶች</p>
+        </div>
+
+        <div class="controls">
+          <div class="tabs">
+            <button class="tab-btn active" data-cat="all" type="button">ሁሉም</button>
+            <button class="tab-btn" data-cat="articles" type="button">Articles (ጽሁፎች)</button>
+            <button class="tab-btn" data-cat="meskot" type="button">Meskot (መስኮት)</button>
+          </div>
+          <input type="search" id="searchInput" class="search-input" placeholder="ርዕስ ወይም ቃል ይፈልጉ..." />
+        </div>
+
+        <div class="posts-grid" id="postsGrid"></div>
+      </div>
+    </section>
+
+    <section id="tyranny">
+      <div class="container">
+        <div class="sec-head">
+          <h2>On Tyranny — 20 ትምህርቶች</h2>
+          <p>ከመነሻ ገጹ የተካተቱትን የቲሞቲ ስናይደር 20 የዴሞክራሲ ጥበቃ ትምህርቶች ያስሱ</p>
+        </div>
+        <div class="tyranny-box">
+          <strong>ትምህርት ይምረጡ፦</strong>
+          <div class="lesson-list" id="lessonList"></div>
+          <div class="lesson-detail" id="lessonDetail"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="two-col">
+          <div class="panel">
+            <h3>የድምጽና የውይይት ክፍል (Audio & Media)</h3>
+            <p style="color:var(--muted); font-size:14px; margin-bottom:12px;">
+              የመድረኩን የድምጽ ውይይቶች፣ የቪዲዮ መርሃ ግብሮች እና የመወያያ መድረክ ማጠቃለያዎች እዚህ ማደራጀት ይችላሉ።
+            </p>
+            <audio controls style="width:100%; margin-bottom:10px;">
+              <source src="" type="audio/mpeg" />
+              ብራውዘርዎ የድምጽ ማጫወቻን አይደግፍም።
+            </audio>
+            <p style="font-size:12.5px; color:var(--muted);">
+              ማሳሰቢያ፦ የድምጽ ፋይል ሊንክ (MP3 URL) ሲያክሉ በቀጥታ እዚህ ይጫወታል።
+            </p>
+          </div>
+
+          <div class="panel">
+            <h3>መልዕክት ወይም ጽሁፍ ይላኩ (Contact Us)</h3>
+            <form id="contactForm">
+              <div class="form-group">
+                <label for="senderName">ስም (Name)</label>
+                <input id="senderName" type="text" required placeholder="ሙሉ ስምዎን ያስገቡ" />
+              </div>
+              <div class="form-group">
+                <label for="senderEmail">ኢሜይል (Email)</label>
+                <input id="senderEmail" type="email" required placeholder="example@email.com" />
+              </div>
+              <div class="form-group">
+                <label for="senderMsg">መልዕክት / አስተያየት</label>
+                <textarea id="senderMsg" rows="3" required placeholder="ሃሳብዎን ወይም ጽሁፍዎን ያስፍሩ..."></textarea>
+              </div>
+              <button type="submit" class="read-btn">መልዕክት ያዘጋጁ</button>
+              <p id="formStatus" style="margin-top:10px; font-size:13.5px; color:var(--primary); font-weight:600;"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal-backdrop" id="readerModal" role="dialog" aria-modal="true">
+    <div class="modal">
+      <div class="modal-top">
+        <span class="tag" id="modalTag" style="margin:0;"></span>
+        <div class="font-tools">
+          <button class="small-btn" id="fontDec" type="button">A-</button>
+          <button class="small-btn" id="fontInc" type="button">A+</button>
+          <button class="small-btn" id="closeModal" type="button">✕ ዝጋ</button>
+        </div>
+      </div>
+      <h2 id="modalTitle" style="font-size:21px; color:var(--primary); margin-bottom:14px;"></h2>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      አዲስ ምዕራፍ ለፍትህና እኩልነት (Addis Mieraf for Justice & Equality) — ለእኩል ዜግነት እና ለፍትሃዊ ውይይት።
+    </div>
+  </footer>
+
+  <script>
+    const POSTS = [
+      {
+        id: 1,
+        cat: "articles",
+        tag: "Articles · አቋም መግለጫ",
+        title: "ወቅታዊ የሃገራችን ሁኔታን አስመልክቶ የተሰጠ የአቋም መግለጫ",
+        excerpt: "በወቅታዊ ሃገራዊ ጉዳዮች ላይ የአዲስ ምዕራፍ የአቋም መግለጫ እና የመፍትሄ ሃሳቦች።",
+        body: "የአዲስ ምዕራፍ ለፍትህና እኩልነት መድረክ በወቅታዊ ሃገራዊ ሁኔታዎች ላይ ሰላማዊ ውይይት፣ የህግ የበላይነት እና የሁሉንም ዜጎች እኩል ተሳትፎ እንዲረጋገጥ ጥሪ ያቀርባል። ዘላቂ ሰላምና መረጋጋት ሊመጣ የሚችለው ሁሉም ወገኖች በእኩልነትና በመከባበር ሲወያዩ ነው።"
+      },
+      {
+        id: 2,
+        cat: "articles",
+        tag: "Articles · ትንታኔ",
+        title: "በእኩልነት ላይ የተመሠረተች ሀገር ለመፍጠር የተደረጉ ሙከራዎች - ፕሮፌሰር መራራ",
+        excerpt: "በእኩልነት እና በዴሞክራሲያዊ ስርዓት ግንባታ ዙሪያ የተደረጉ ጥረቶችና ተሞክሮዎች።",
+        body: "በእኩልነት ላይ የተመሰረተች ሀገር ለመገንባት የተደረጉ ታሪካዊና ፖለቲካዊ ሙከራዎች በርካታ ፈተናዎችንና ትምህርቶችን አልፈዋል። ከእነዚህ ተሞክሮዎች በመማር ለወደፊት አካታች ስርዓት መሰረት መጣል ወሳኝ ነው።"
+      },
+      {
+        id: 3,
+        cat: "articles",
+        tag: "Articles · ንጽጽር",
+        title: "አሃዳዊቷን ዩጎዝላቪያ አልሞ ሰባት ሉኡላዊ መንግስታትን ካዋለደው የሰርቦች እንቅስቃሴ ምን እንማራለን?",
+        excerpt: "ከታሪካዊ ክስተቶች የምንቀስማቸው የፖለቲካና የማህበረሰብ አብሮነት ትምህርቶች።",
+        body: "የዩጎዝላቪያ ታሪካዊ ሂደት ብዝሃነትን በማስተናገድና በመግባባት አለመፍታት የሚያስከትለውን ዋጋ ያሳያል። ለአብሮነትና ለሰላም መግባባትን ማስቀደም ከፍተኛ ፋይዳ አለው።"
+      },
+      {
+        id: 4,
+        cat: "articles",
+        tag: "Articles · English",
+        title: "Forgiving and being Reconciled",
+        excerpt: "Reflections on forgiveness, healing, and social reconciliation for a shared future.",
+        body: "Forgiving and being reconciled are essential steps toward healing deep-seated divisions and building trust across communities. Meaningful reconciliation requires honesty, mutual respect, and a commitment to equal citizenship."
+      },
+      {
+        id: 5,
+        cat: "articles",
+        tag: "Articles · ተከታታይ (1–5)",
+        title: "ስር ከሰደደ ያለመተማመን ወደ ደመቀ ፍቅር ለመሸጋገር ያለን ምኞት ለመቀራረብ ያለንን ተስፋ እንዳያጨልም ስጋት ፈጥሯል (ክፍል 1–5)",
+        excerpt: "ባለ አምስት ክፍል ጽሁፍ ስለ መተማመን ግንባታ፣ የጋራ ተስፋ እና መቀራረብ።",
+        body: "ክፍል 1–5 ማጠቃለያ፦ ስር የሰደደ ያለመተማመንን በውይይትና በፍትሃዊ አካሄድ በማክሰም ወደ መቀራረብና ወደ አብሮነት መሸጋገር ይቻላል። ተስፋን በተግባር በሚታይ መተማመን ማጠናከር የሁላችንም ኃላፊነት ነው።"
+      },
+      {
+        id: 6,
+        cat: "articles",
+        tag: "Articles · ዓላማ",
+        title: "የአዲስ ምዕራፍ የመወያያ መድረክ አላማ",
+        excerpt: "የመድረኩ ዋና አላማ፣ የውይይት መርሆች እና የተሳትፎ ማዕቀፍ።",
+        body: "የአዲስ ምዕራፍ የመወያያ መድረክ ዋና አላማ የተለያዩ ሃሳቦች በሰከነና በአክብሮት የሚንሸራሸሩበት፣ ለፍትህና ለእኩልነት የጋራ መፍትሄ የሚፈለግበት መድረክ መፍጠር ነው።"
+      },
+      {
+        id: 7,
+        cat: "meskot",
+        tag: "Meskot · መስኮት",
+        title: "ከማህበረ-ፖለቲካዊ ተሳትፎ እየተገፋ ያለው ሙስሊም & የህገ-መንግስቱ አንቀጽ 90 ይከበር!",
+        excerpt: "ስለ እኩል ተሳትፎ፣ ሴኩላሪዝም እና ህገ-መንግስታዊ መብቶች መከበር የሚነሱ ሃሳቦች።",
+        body: "የመስኮት ዓምድ በዜጎች እኩል ማህበራዊና ፖለቲካዊ ተሳትፎ፣ በህገ-መንግስታዊ መርሆች መከበር እና በሰላማዊ የመብት ጥያቄዎች ላይ ያተኩራል።"
+      },
+      {
+        id: 8,
+        cat: "meskot",
+        tag: "Meskot · መስኮት",
+        title: "የትግላችንን አድማስ በመረጃ እናስፋ! & ዳኞች ምን እየጠበቁ ይሆን?",
+        excerpt: "በመረጃ ላይ የተመሰረተ እንቅስቃሴ፣ ፍትህ እና የዳኝነት ነጻነት ጉዳዮች።",
+        body: "በመረጃ የተደገፈ ግንዛቤ እና የፍትህ ስርዓት ተጠያቂነት ለፍትሃዊ ማህበረሰብ ግንባታ ወሳኝ መሰረቶች ናቸው።"
+      }
+    ];
+
+    const LESSONS = [
+      "1. አምባገነንነትን በራስ ተነሳሽነት አትቀበሉ (Do not obey in advance).",
+      "2. ተቋማትን ይጠብቁ (Defend institutions).",
+      "3. የአንድ ፓርቲ የበላይነትን ይጠንቀቁ (Beware the one-party state).",
+      "4. የዓለም አቀፍ ኃላፊነትን ይሸከሙ (Take responsibility for the face of the world).",
+      "5. ሙያዊ ስነ-ምግባርን ያክብሩ (Remember professional ethics).",
+      "6. ለመከላከያ ሰራዊትና ለፖሊስ ጥንቃቄ ያድርጉ (Be wary of paramilitaries).",
+      "7. የሃሳብ ነጻነትንና ድፍረትን ይኑርዎት (Be reflective if you must be equipped).",
+      "8. ጎልቶ የሚታይ ቋንቋ ይጠቀሙ (Stand out).",
+      "9. ቋንቋችንን እንጠብቅ (Be kind to our language).",
+      "10. እውነትን ያምኑ (Believe in truth).",
+      "11. ምርመራ ያድርጉ (Investigate).",
+      "12. ከአካባቢዎ ጋር አይን እና ጆሮ ይሁኑ (Make eye contact and small talk).",
+      "13. አካላዊ እንቅስቃሴን ያድርጉ (Practice corporeal politics).",
+      "14. የግል ህይወትን ይጠብቁ (Establish a private life).",
+      "15. ለበጎ ስራ አስተዋጽኦ ያድርጉ (Contribute to good causes).",
+      "16. ከሌሎች ሃገራት ተሞክሮ ይማሩ (Learn from peers in other countries).",
+      "17. ንቁ ዜጋ ይሁኑ (Listen for dangerous words).",
+      "18. በተረጋጋ መንፈስ ይቆዩ (Be calm when the unthinkable arrives).",
+      "19. ጀግና ይሁኑ (Be a patriot).",
+      "20. ድፍረት ይኑርዎት (Be as courageous as you can)."
+    ];
+
+    const postsGrid = document.getElementById("postsGrid");
+    const searchInput = document.getElementById("searchInput");
+    const tabButtons = document.querySelectorAll(".tab-btn");
+    let currentCat = "all";
+
+    function renderPosts() {
+      const q = searchInput.value.trim().toLowerCase();
+      const filtered = POSTS.filter(p => {
+        const matchCat = currentCat === "all" || p.cat === currentCat;
+        const matchText = !q || p.title.toLowerCase().includes(q) || p.excerpt.toLowerCase().includes(q) || p.body.toLowerCase().includes(q);
+        return matchCat && matchText;
+      });
+
+      if (!filtered.length) {
+        postsGrid.innerHTML = '<p style="color:var(--muted);">ምንም የሚዛመድ ጽሁፍ አልተገኘም።</p>';
+        return;
+      }
+
+      postsGrid.innerHTML = filtered.map(p => `
+        <article class="post-card">
+          <div>
+            <span class="tag">${p.tag}</span>
+            <h3>${p.title}</h3>
+            <p class="post-excerpt">${p.excerpt}</p>
+          </div>
+          <button class="read-btn" type="button" onclick="openPost(${p.id})">ሙሉውን ያንብቡ</button>
+        </article>
+      `).join("");
+    }
+
+    tabButtons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        tabButtons.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        currentCat = btn.dataset.cat;
+        renderPosts();
+      });
+    });
+
+    searchInput.addEventListener("input", renderPosts);
+
+    // Modal Reader
+    const modal = document.getElementById("readerModal");
+    const modalTitle = document.getElementById("modalTitle");
+    const modalTag = document.getElementById("modalTag");
+    const modalBody = document.getElementById("modalBody");
+    let modalFontSize = 16;
+
+    window.openPost = function(id) {
+      const post = POSTS.find(item => item.id === id);
+      if (!post) return;
+      modalTag.textContent = post.tag;
+      modalTitle.textContent = post.title;
+      modalBody.textContent = post.body;
+      modalFontSize = 16;
+      modalBody.style.fontSize = modalFontSize + "px";
+      modal.classList.add("open");
+    };
+
+    document.getElementById("closeModal").addEventListener("click", () => modal.classList.remove("open"));
+    modal.addEventListener("click", e => { if (e.target === modal) modal.classList.remove("open"); });
+    document.getElementById("fontInc").addEventListener("click", () => {
+      modalFontSize = Math.min(24, modalFontSize + 2);
+      modalBody.style.fontSize = modalFontSize + "px";
+    });
+    document.getElementById("fontDec").addEventListener("click", () => {
+      modalFontSize = Math.max(14, modalFontSize - 2);
+      modalBody.style.fontSize = modalFontSize + "px";
+    });
+
+    // 20 Lessons
+    const lessonList = document.getElementById("lessonList");
+    const lessonDetail = document.getElementById("lessonDetail");
+
+    lessonList.innerHTML = LESSONS.map((txt, idx) => `
+      <button class="lesson-item" type="button" data-idx="${idx}">${txt}</button>
+    `).join("");
+
+    function selectLesson(idx) {
+      document.querySelectorAll(".lesson-item").forEach((el, i) => {
+        el.classList.toggle("selected", i === idx);
+      });
+      lessonDetail.innerHTML = `<strong>${LESSONS[idx]}</strong><br/><span style="color:var(--muted);">ይህ ትምህርት ዴሞክራሲያዊ ተቋማትን፣ እውነትን እና የዜጎችን ንቁ ተሳትፎ መጠበቅ አስፈላጊነትን ያመላክታል።</span>`;
+    }
+
+    lessonList.addEventListener("click", e => {
+      const btn = e.target.closest(".lesson-item");
+      if (btn) selectLesson(Number(btn.dataset.idx));
+    });
+
+    // Contact form
+    document.getElementById("contactForm").addEventListener("submit", e => {
+      e.preventDefault();
+      const name = document.getElementById("senderName").value.trim();
+      document.getElementById("formStatus").textContent = `አመሰግናለሁ ${name} — መልዕክትዎ በቅጽ ተዘጋጅቷል (በኢሜይል ወይም በመድረክዎ አድራሻ ማስተላለፍ ይችላሉ)።`;
+      e.target.reset();
+    });
+
+    // Language toggle (UI labels)
+    let isAmharic = true;
+    const langBtn = document.getElementById("langToggle");
+    langBtn.addEventListener("click", () => {
+      isAmharic = !isAmharic;
+      langBtn.textContent = isAmharic ? "English" : "አማርኛ";
+      document.getElementById("navTitle").textContent = isAmharic
+        ? "አዲስ ምዕራፍ ለፍትህና እኩልነት"
+        : "Addis Mieraf for Justice & Equality";
+      document.getElementById("heroHeading").textContent = isAmharic
+        ? "አዲስ ምዕራፍ ለፍትህና እኩልነት"
+        : "Addis Mieraf for Justice & Equality";
+      document.getElementById("heroCtaPrimary").textContent = isAmharic ? "ጽሁፎችን ያንብቡ" : "Read Articles";
+      document.getElementById("heroCtaSecondary").textContent = isAmharic ? "ሃሳብ ይላኩ" : "Send Feedback";
+      document.getElementById("pillarsTitle").textContent = isAmharic ? "መሰረታዊ እሴቶች" : "Core Pillars";
+      document.getElementById("archiveTitle").textContent = isAmharic ? "ጽሁፎች እና «መስኮት» መድረክ" : "Articles & Meskot Hub";
+    });
+
+    renderPosts();
+    selectLesson(0);
+  </script>
+</body>
+</html>
